@@ -7,32 +7,48 @@
     <title>BPV Waarderingsapp</title>
     <style>
         body {
+            margin: 0;
             font-family: Arial, sans-serif;
-            padding: 20px;
-            background-color: #f8f8f8;
         }
-        h1 {
-            text-align: center;
-        }
-        .nav, .content {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        .nav a {
-            display: block;
-            padding: 12px;
-            margin: 10px 0;
-            background-color: #0066cc;
-            color: white;
-            text-align: center;
-            text-decoration: none;
-            border-radius: 8px;
-        }
-        .nav a:hover {
+        .sidebar {
+            height: 100vh;
+            width: 250px;
+            position: fixed;
+            left: 0;
+            top: 0;
             background-color: #004999;
+            padding-top: 20px;
+            color: white;
+        }
+        .sidebar-header {
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            font-weight: bold;
+            border-bottom: 1px solid #ccc;
+        }
+        .sidebar-header .menu-icon {
+            font-size: 1.5em;
+            margin-right: 10px;
+        }
+        .sidebar a {
+            padding: 15px 20px;
+            display: block;
+            color: white;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+        .sidebar a:hover {
+            background-color: #0066cc;
+        }
+        .main-content {
+            margin-left: 250px;
+            padding: 20px;
+            background-color: #f0f0f0;
+            height: 100vh;
         }
         .footer {
-            text-align: center;
             margin-top: 40px;
             font-size: 0.9em;
             color: #888;
@@ -41,8 +57,11 @@
 </head>
 <body>
 
-    <h1>🏫 BPV Waardering - Coach Portaal</h1>
-    <div class="nav">
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <div class="menu-icon">&#9776;</div>
+            <div>Menu</div>
+        </div>
         <a href="https://eu.jotform.com/app/build/251482177459365" target="_blank">📖 Uitleg</a>
         <a href="https://form.jotform.com/251481063832050" target="_blank">📄 Deel 1: Werkhouding</a>
         <a href="https://form.jotform.com/251486001102037" target="_blank">📄 Deel 2: Communicatie</a>
@@ -50,8 +69,13 @@
         <a href="https://form.jotform.com/251485986322365" target="_blank">📄 Deel 4: Reflectie</a>
     </div>
 
-    <div class="footer">
-        &copy; 2025 - Waarderingsapp voor BPV | ROC Hilversum
+    <div class="main-content">
+        <h1>🏫 BPV Waardering - Coach Portaal</h1>
+        <p>Welkom in het portaal voor BPV-beoordelingen. Gebruik het menu aan de linkerkant om naar de verschillende onderdelen van de app te navigeren.</p>
+
+        <div class="footer">
+            &copy; 2025 - Waarderingsapp voor BPV | ROC Hilversum
+        </div>
     </div>
 
 </body>
