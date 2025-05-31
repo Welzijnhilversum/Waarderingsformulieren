@@ -16,13 +16,18 @@
             position: fixed;
             left: 0;
             top: 0;
-            background-color: #004999;
+            background-color: #b30000;
             padding-top: 20px;
             color: white;
+            transition: transform 0.3s ease;
+        }
+        .sidebar.collapsed {
+            transform: translateX(-100%);
         }
         .sidebar-header {
             display: flex;
             align-items: center;
+            justify-content: space-between;
             padding: 10px 20px;
             font-size: 1.2em;
             font-weight: bold;
@@ -30,7 +35,13 @@
         }
         .sidebar-header .menu-icon {
             font-size: 1.5em;
-            margin-right: 10px;
+            cursor: pointer;
+        }
+        .logo {
+            display: block;
+            margin: 10px auto;
+            width: 80%;
+            max-width: 150px;
         }
         .sidebar a {
             padding: 15px 20px;
@@ -40,43 +51,89 @@
             transition: background 0.3s;
         }
         .sidebar a:hover {
-            background-color: #0066cc;
+            background-color: #cc0000;
         }
         .main-content {
             margin-left: 250px;
             padding: 20px;
             background-color: #f0f0f0;
-            height: 100vh;
+            min-height: 100vh;
         }
         .footer {
             margin-top: 40px;
             font-size: 0.9em;
             color: #888;
         }
+        @media (max-width: 768px) {
+            .sidebar {
+                transform: translateX(-100%);
+            }
+            .sidebar.open {
+                transform: translateX(0);
+            }
+            .main-content {
+                margin-left: 0;
+            }
+        }
     </style>
 </head>
 <body>
 
-    <div class="sidebar">
+    <div class="sidebar" id="sidebar">
         <div class="sidebar-header">
-            <div class="menu-icon">&#9776;</div>
-            <div>Menu</div>
+            <span><span class="menu-icon" onclick="toggleSidebar()">&#9776;</span> Menu</span>
         </div>
-        <a href="https://eu.jotform.com/app/build/251482177459365" target="_blank">📖 Uitleg</a>
-        <a href="https://form.jotform.com/251481063832050" target="_blank">📄 Deel 1: Werkhouding</a>
-        <a href="https://form.jotform.com/251486001102037" target="_blank">📄 Deel 2: Communicatie</a>
-        <a href="https://form.jotform.com/251485888576377" target="_blank">📄 Deel 3: Activiteiten</a>
-        <a href="https://form.jotform.com/251485986322365" target="_blank">📄 Deel 4: Reflectie</a>
+        <img src="https://via.placeholder.com/150x50?text=ROC+Logo" alt="ROC Logo" class="logo" id="logo">
+        <a href="#home">🏠 Home</a>
+        <a href="#profiel">👤 Profiel - Onderwijsassistent</a>
+        <a href="#form1">📄 Waarderingsformulier P1</a>
+        <a href="#form2">📄 Waarderingsformulier P2</a>
+        <a href="#form3">📄 Waarderingsformulier P3</a>
+        <a href="#form4">📄 Waarderingsformulier P4</a>
     </div>
 
-    <div class="main-content">
-        <h1>🏫 BPV Waardering - Coach Portaal</h1>
-        <p>Welkom in het portaal voor BPV-beoordelingen. Gebruik het menu aan de linkerkant om naar de verschillende onderdelen van de app te navigeren.</p>
+    <div class="main-content" id="main-content">
+        <section id="home">
+            <h1>🏫 Home</h1>
+            <p>Welkom bij het BPV Waarderingsportaal. Gebruik het menu aan de linkerkant om te navigeren.</p>
+        </section>
+
+        <section id="profiel">
+            <h2>👤 Profiel - Onderwijsassistent</h2>
+            <p>Inhoud volgt later...</p>
+        </section>
+
+        <section id="form1">
+            <h2>📄 Waarderingsformulier P1</h2>
+            <p>Formulier P1 komt hier.</p>
+        </section>
+
+        <section id="form2">
+            <h2>📄 Waarderingsformulier P2</h2>
+            <p>Formulier P2 komt hier.</p>
+        </section>
+
+        <section id="form3">
+            <h2>📄 Waarderingsformulier P3</h2>
+            <p>Formulier P3 komt hier.</p>
+        </section>
+
+        <section id="form4">
+            <h2>📄 Waarderingsformulier P4</h2>
+            <p>Formulier P4 komt hier.</p>
+        </section>
 
         <div class="footer">
             &copy; 2025 - Waarderingsapp voor BPV | ROC Hilversum
         </div>
     </div>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById("sidebar");
+            sidebar.classList.toggle("open");
+        }
+    </script>
 
 </body>
 </html>
