@@ -1,108 +1,4 @@
-<!DOCTYPE html>
-<html lang="nl">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>BPV Waarderingsapp</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
-    .sidebar {
-      height: 100vh;
-      width: 250px;
-      position: fixed;
-      top: 0;
-      left: 0;
-      background-color: #b30000;
-      padding-top: 20px;
-      color: white;
-      transition: transform 0.3s ease;
-      z-index: 1000;
-    }
-    .sidebar-header {
-      display: flex;
-      align-items: center;
-      padding: 10px 20px;
-      font-size: 1.2em;
-      font-weight: bold;
-    }
-    .menu-icon {
-      font-size: 1.5em;
-      cursor: pointer;
-      margin-right: 10px;
-    }
-    .logo {
-      display: block;
-      margin: 10px auto;
-      width: 80%;
-      max-width: 180px;
-    }
-    .sidebar a {
-      padding: 15px 20px;
-      display: block;
-      color: white;
-      text-decoration: none;
-    }
-    .sidebar a:hover {
-      background-color: #cc0000;
-    }
-    .main-content {
-      margin-left: 250px;
-      padding: 20px;
-      background-color: #f0f0f0;
-    }
-    .footer {
-      margin-top: 40px;
-      font-size: 0.9em;
-      color: #888;
-    }
-    @media (max-width: 768px) {
-      .sidebar {
-        transform: translateX(-100%);
-        position: fixed;
-      }
-      .sidebar.open {
-        transform: translateX(0);
-      }
-      .main-content {
-        margin-left: 0;
-      }
-    }
-    h1, h2 {
-      color: #b30000;
-    }
-  </style>
-</head>
 <body>
-<section id="home">
-  <h1><strong>Waarderingsformulieren</strong></h1>
-  <h2>Onderwijsassistent</h2>
-
-  <p><strong>Instructie hoe te werken met het waarderingsformulier</strong></p>
-
-  <h3>Handleiding Waardering houding & gedrag</h3>
-  <p>Als BPV-begeleider volg en waardeer je de beroepsontwikkeling van de student in de praktijk. Het waarderingsformulier is het instrument om de ontwikkeling van de student in de beroepspraktijk te volgen en te waarderen.</p>
-
-  <h3>Uitgangspunt</h3>
-  <p>Uitgangspunt is dat de student in fasen de werkprocessen van het beroep leert uit te voeren, zich de kennis, vaardigheden en houdingsaspecten eigen maakt en dat laat zien in zijn gedrag bij het handelen in de beroepspraktijk.</p>
-
-  <h3>Het waarderen van de ontwikkeling</h3>
-  <p>Om zicht op de ontwikkeling te krijgen is het leren uitvoeren van de werkprocessen in drie fasen opgedeeld.</p>
-
-  <p>Per werkproces is voor elke fase beschreven welk gedrag in het handelen van de student zichtbaar moet worden. Er kan gescoord worden met 1, 2 of 3 sterren:</p>
-  <ul>
-    <li>1 ster: Het gedrag is nauwelijks waarneembaar en moet nog verder worden ontwikkeld.</li>
-    <li>2 sterren: Het gedrag is aanwezig, maar moet nog verder ontwikkeld worden.</li>
-    <li>3 sterren: Het gedrag is ontwikkeld.</li>
-  </ul>
-
-  <p>Alle werkprocessen die gekoppeld zijn aan een examen moeten op startbekwaam niveau op minimaal 2 sterren zijn afgerond voor deelname aan dat examen.</p>
-
-  <h3>Het proces van waarderen</h3>
-  <p>De student, de coach en de stagebegeleider (plus mogelijk andere directe betrokkenen) waarderen de beheersing van de relevante werkprocessen gedurende het opleidingstraject. De leeruitkomsten van de praktijkopdrachten, het informele leren (spontane leerervaringen waar geen opdracht aan verbonden is) en het ondersteunend onderwijs vormen de bewijzen voor deze waarderingen. Tijdens de begeleidingsmomenten kun je regelmatig de waarderingsformulieren ter hand nemen om de vorderingen te bespreken.</p>
-</section>
   <div class="sidebar" id="sidebar">
     <div class="sidebar-header">
       <span class="menu-icon" onclick="toggleSidebar()">&#9776;</span>
@@ -111,7 +7,49 @@
     <img src="footer.png" alt="ROC Logo" class="logo" />
     <a href="#home">🏠 Home</a>
     <a href="#profiel">👤 Profiel - Onderwijsassistent</a>
-    <a href="#form1">📄 Waarderingsformulier P1
-    <a href="#form2">📄 Waarderingsformulier P2
-    <a href="#form3">📄 Waarderingsformulier P3
-    <a href="#form4">📄 Waarderingsformulier P4
+    <a href="#form1">📄 Waarderingsformulier P1</a>
+    <a href="#form2">📄 Waarderingsformulier P2</a>
+    <a href="#form3">📄 Waarderingsformulier P3</a>
+    <a href="#form4">📄 Waarderingsformulier P4</a>
+  </div>
+
+  <div class="main-content" id="main-content">
+
+    <section id="home">
+      <h1><strong>Waarderingsformulieren</strong></h1>
+      <h2>Onderwijsassistent</h2>
+      <p><strong>Instructie hoe te werken met het waarderingsformulier</strong></p>
+
+      <h3>Handleiding Waardering houding & gedrag</h3>
+      <p>Als BPV-begeleider volg en waardeer je de beroepsontwikkeling van de student in de praktijk. Het waarderingsformulier is het instrument om de ontwikkeling van de student in de beroepspraktijk te volgen en te waarderen.</p>
+
+      <h3>Uitgangspunt</h3>
+      <p>Uitgangspunt is dat de student in fasen de werkprocessen van het beroep leert uit te voeren, zich de kennis, vaardigheden en houdingsaspecten eigen maakt en dat laat zien in zijn gedrag bij het handelen in de beroepspraktijk.</p>
+
+      <h3>Het waarderen van de ontwikkeling</h3>
+      <p>Om zicht op de ontwikkeling te krijgen is het leren uitvoeren van de werkprocessen in drie fasen opgedeeld.</p>
+
+      <p>Per werkproces is voor elke fase beschreven welk gedrag in het handelen van de student zichtbaar moet worden. Er kan gescoord worden met 1, 2 of 3 sterren:</p>
+      <ul>
+        <li>1 ster: Het gedrag is nauwelijks waarneembaar en moet nog verder worden ontwikkeld.</li>
+        <li>2 sterren: Het gedrag is aanwezig, maar moet nog verder ontwikkeld worden.</li>
+        <li>3 sterren: Het gedrag is ontwikkeld.</li>
+      </ul>
+
+      <p>Alle werkprocessen die gekoppeld zijn aan een examen moeten op startbekwaam niveau op minimaal 2 sterren zijn afgerond voor deelname aan dat examen.</p>
+
+      <h3>Het proces van waarderen</h3>
+      <p>De student, de coach en de stagebegeleider (plus mogelijk andere directe betrokkenen) waarderen de beheersing van de relevante werkprocessen gedurende het opleidingstraject. De leeruitkomsten van de praktijkopdrachten, het informele leren (spontane leerervaringen waar geen opdracht aan verbonden is) en het ondersteunend onderwijs vormen de bewijzen voor deze waarderingen. Tijdens de begeleidingsmomenten kun je regelmatig de waarderingsformulieren ter hand nemen om de vorderingen te bespreken.</p>
+    </section>
+
+    <!-- Andere secties komen hier -->
+
+  </div>
+
+  <script>
+    function toggleSidebar() {
+      const sidebar = document.getElementById("sidebar");
+      sidebar.classList.toggle("open");
+    }
+  </script>
+</body>
