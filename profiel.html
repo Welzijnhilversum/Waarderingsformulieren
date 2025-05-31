@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Profiel - Onderwijsassistent</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    .sidebar {
+      height: 100vh;
+      width: 250px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #b30000;
+      padding-top: 20px;
+      color: white;
+      transition: transform 0.3s ease;
+      z-index: 1000;
+    }
+    .sidebar-header {
+      display: flex;
+      align-items: center;
+      padding: 10px 20px;
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+    .menu-icon {
+      font-size: 1.5em;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+    .logo {
+      display: block;
+      margin: 10px auto;
+      width: 80%;
+      max-width: 180px;
+    }
+    .sidebar a {
+      padding: 15px 20px;
+      display: block;
+      color: white;
+      text-decoration: none;
+    }
+    .sidebar a:hover {
+      background-color: #cc0000;
+    }
+    .main-content {
+      margin-left: 250px;
+      padding: 20px;
+      background-color: #f0f0f0;
+    }
+    .footer {
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #888;
+    }
+    @media (max-width: 768px) {
+      .sidebar {
+        transform: translateX(-100%);
+        position: fixed;
+      }
+      .sidebar.open {
+        transform: translateX(0);
+      }
+      .main-content {
+        margin-left: 0;
+      }
+    }
+    h1, h2 {
+      color: #b30000;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <span class="menu-icon" onclick="toggleSidebar()">&#9776;</span>
+      <span>Menu</span>
+    </div>
+    <img src="footer.png" alt="ROC Logo" class="logo" />
+    <a href="index.html">🏠 Home</a>
+    <a href="profiel.html">👤 Profiel - Onderwijsassistent</a>
+    <a href="formulier-p1.html">📄 Waarderingsformulier P1</a>
+    <a href="formulier-p2.html">📄 Waarderingsformulier P2</a>
+    <a href="formulier-p3.html">📄 Waarderingsformulier P3</a>
+    <a href="formulier-p4.html">📄 Waarderingsformulier P4</a>
+  </div>
+
+  <div class="main-content" id="main-content">
+    <section id="profiel">
+      <h1>👤 Profiel 3 – Onderwijsassistent</h1>
+
+      <h3>Complexiteit:</h3>
+      <p>De onderwijsassistent heeft verschillende soorten werk. Dit kan complex zijn: het gaat om zowel pedagogische als didactische doelen én het werk is wisselend tussen individuele leerlingen en groepen. Een onderwijsassistent gaat om met onverwachte situaties, neemt beslissingen, maakt keuzes bij dilemma's en improviseert. Sommige specifieke assisterende onderwijstaken kunnen om bovenstaande redenen complex zijn. Om deze taken (op inhoudelijk, didactisch, methodisch of organisatorisch terrein) uit te voeren heeft zij specialistische kennis en vaardigheden nodig (bijvoorbeeld: kennis van leergebieden en didactische vaardigheden).</p>
+
+      <h3>Verantwoordelijkheid en zelfstandigheid:</h3>
+      <p>De onderwijsassistent verricht assisterende, veelal uitvoerende taken. Zij assisteert de leraar, leraren of het team, in overleg met en onder supervisie van een leraar of teamleider. De taken die zij verricht voert ze - binnen de gegeven taakstelling - zelfstandig uit. Zij draagt daarbij verantwoordelijkheid voor de kwaliteit van haar eigen werkzaamheden. Zij heeft geen zelfstandige verantwoordelijkheid binnen het onderwijsproces (het lesgeven). De leraar is eindverantwoordelijk voor de leerresultaten van leerlingen.</p>
+    </section>
+
+    <div class="footer">
+      &copy; 2025 - Waarderingsapp voor BPV | ROC Hilversum
+    </div>
+  </div>
+
+  <script>
+    function toggleSidebar() {
+      const sidebar = document.getElementById("sidebar");
+      sidebar.classList.toggle("open");
+    }
+  </script>
+
+</body>
+</html>
